@@ -1,0 +1,399 @@
+from datetime import date
+
+class User:
+    def __init__(self, first_name, last_name, emirates_id, email, phone_number, address):
+        self.__first_name = first_name
+        self.__last_name = last_name
+        self.__emirates_id = emirates_id
+        self.__email = email
+        self.__phone_number = phone_number
+        self.__address = address
+
+    # Getters and Setters
+    def get_first_name(self):
+        return self.__first_name
+
+    def set_first_name(self, first_name):
+        self.__first_name = first_name
+
+    def get_last_name(self):
+        return self.__last_name
+
+    def set_last_name(self, last_name):
+        self.__last_name = last_name
+
+    def get_emirates_id(self):
+        return self.__emirates_id
+
+    def set_emirates_id(self, emirates_id):
+        self.__emirates_id = emirates_id
+
+    def get_email(self):
+        return self.__email
+
+    def set_email(self, email):
+        self.__email = email
+
+    def get_phone_number(self):
+        return self.__phone_number
+
+    def set_phone_number(self, phone_number):
+        self.__phone_number = phone_number
+
+    def get_address(self):
+        return self.__address
+
+    def set_address(self, address):
+        self.__address = address
+
+    # Display information
+    def display_user_info(self):
+        print("User Information:")
+        print("First Name: " + self.__first_name)
+        print("Last Name: " + self.__last_name)
+        print("Emirates ID: " + self.__emirates_id)
+        print("Email: " + self.__email)
+        print("Phone Number: " + str(self.__phone_number))
+        print("Address: " + self.__address)
+
+    def display_full_name(self):
+        print("Full Name: " + self.__first_name + " " + self.__last_name)
+
+
+class Room:
+    def __init__(self, room_number, room_type, room_size, room_capacity, number_of_beds, room_price):
+        self.__room_number = room_number
+        self.__room_type = room_type
+        self.__room_size = room_size
+        self.__room_capacity = room_capacity
+        self.__number_of_beds = number_of_beds
+        self.__room_price = room_price
+
+    # Getters and Setters
+    def get_room_number(self):
+        return self.__room_number
+
+    def set_room_number(self, room_number):
+        self.__room_number = room_number
+
+    def get_room_type(self):
+        return self.__room_type
+
+    def set_room_type(self, room_type):
+        self.__room_type = room_type
+
+    def get_room_size(self):
+        return self.__room_size
+
+    def set_room_size(self, room_size):
+        self.__room_size = room_size
+
+    def get_room_capacity(self):
+        return self.__room_capacity
+
+    def set_room_capacity(self, room_capacity):
+        self.__room_capacity = room_capacity
+
+    def get_number_of_beds(self):
+        return self.__number_of_beds
+
+    def set_number_of_beds(self, number_of_beds):
+        self.__number_of_beds = number_of_beds
+
+    def get_room_price(self):
+        return self.__room_price
+
+    def set_room_price(self, room_price):
+        self.__room_price = room_price
+
+    # Display information
+    def display_room_info(self):
+        print("Room Information:")
+        print("Room Number: " + str(self.__room_number))
+        print("Room Type: " + self.__room_type)
+        print("Room Size: " + self.__room_size)
+        print("Room Capacity: " + self.__room_capacity)
+        print("Number of Beds: " + str(self.__number_of_beds))
+        print("Room Price: " + str(self.__room_price))
+
+    def confirm_room(self):
+        print("Room " + str(self.__room_number) + " of type " + self.__room_type + " is confirmed.")
+
+
+class Reservation:
+    def __init__(self, reservation_id, guest, room_number, check_in_date, check_out_date, reservation_status):
+        self.__reservation_id = reservation_id
+        self.__guest = guest
+        self.__room_number = room_number
+        self.__check_in_date = check_in_date
+        self.__check_out_date = check_out_date
+        self.__reservation_status = reservation_status
+
+    # Getters and Setters
+    def get_reservation_id(self):
+        return self.__reservation_id
+
+    def set_reservation_id(self, reservation_id):
+        self.__reservation_id = reservation_id
+
+    def get_guest(self):
+        return self.__guest
+
+    def set_guest(self, guest):
+        self.__guest = guest
+
+    def get_room_number(self):
+        return self.__room_number
+
+    def set_room_number(self, room_number):
+        self.__room_number = room_number
+
+    def get_check_in_date(self):
+        return self.__check_in_date
+
+    def set_check_in_date(self, check_in_date):
+        self.__check_in_date = check_in_date
+
+    def get_check_out_date(self):
+        return self.__check_out_date
+
+    def set_check_out_date(self, check_out_date):
+        self.__check_out_date = check_out_date
+
+    def get_reservation_status(self):
+        return self.__reservation_status
+
+    def set_reservation_status(self, reservation_status):
+        self.__reservation_status = reservation_status
+
+    # Display information
+    def display_reservation_info(self):
+        print("Reservation Information:")
+        print("Reservation ID: " + self.__reservation_id)
+        print("Guest: " + self.__guest)
+        print("Room Number: " + str(self.__room_number))
+        print("Check-in Date: " + str(self.__check_in_date))
+        print("Check-out Date: " + str(self.__check_out_date))
+        print("Reservation Status: " + self.__reservation_status)
+
+    def confirm_reservation(self):
+        print("Reservation " + self.__reservation_id + " for " + self.__guest + " is confirmed.")
+
+
+class Payment:
+    def __init__(self, payment_id, payment_method, currency, total_amount, deposit, payment_status):
+        self.__payment_id = payment_id
+        self.__payment_method = payment_method
+        self.__currency = currency
+        self.__total_amount = total_amount
+        self.__deposit = deposit
+        self.__payment_status = payment_status
+
+    # Getters and Setters
+    def get_payment_id(self):
+        return self.__payment_id
+
+    def set_payment_id(self, payment_id):
+        self.__payment_id = payment_id
+
+    def get_payment_method(self):
+        return self.__payment_method
+
+    def set_payment_method(self, payment_method):
+        self.__payment_method = payment_method
+
+    def get_currency(self):
+        return self.__currency
+
+    def set_currency(self, currency):
+        self.__currency = currency
+
+    def get_total_amount(self):
+        return self.__total_amount
+
+    def set_total_amount(self, total_amount):
+        self.__total_amount = total_amount
+
+    def get_deposit(self):
+        return self.__deposit
+
+    def set_deposit(self, deposit):
+        self.__deposit = deposit
+
+    def get_payment_status(self):
+        return self.__payment_status
+
+    def set_payment_status(self, payment_status):
+        self.__payment_status = payment_status
+
+    # Display information
+    def display_payment_info(self):
+        print("Payment Information:")
+        print("Payment ID: " + self.__payment_id)
+        print("Payment Method: " + self.__payment_method)
+        print("Currency: " + self.__currency)
+        print("Total Amount: " + str(self.__total_amount))
+        print("Deposit: " + str(self.__deposit))
+        print("Payment Status: " + self.__payment_status)
+
+    def process_payment(self):
+        print("Payment " + self.__payment_id + " has been processed.")
+
+
+class Hotel:
+    def __init__(self, hotel_name, hotel_location, hotel_rating, hotel_capacity, total_number_of_rooms, swimming_pool):
+        self.__hotel_name = hotel_name
+        self.__hotel_location = hotel_location
+        self.__hotel_rating = hotel_rating
+        self.__hotel_capacity = hotel_capacity
+        self.__total_number_of_rooms = total_number_of_rooms
+        self.__swimming_pool = swimming_pool
+
+    # Getters and Setters
+    def get_hotel_name(self):
+        return self.__hotel_name
+
+    def set_hotel_name(self, hotel_name):
+        self.__hotel_name = hotel_name
+
+    def get_hotel_location(self):
+        return self.__hotel_location
+
+    def set_hotel_location(self, hotel_location):
+        self.__hotel_location = hotel_location
+
+    def get_hotel_rating(self):
+        return self.__hotel_rating
+
+    def set_hotel_rating(self, hotel_rating):
+        self.__hotel_rating = hotel_rating
+
+    def get_hotel_capacity(self):
+        return self.__hotel_capacity
+
+    def set_hotel_capacity(self, hotel_capacity):
+        self.__hotel_capacity = hotel_capacity
+
+    def get_total_number_of_rooms(self):
+        return self.__total_number_of_rooms
+
+    def set_total_number_of_rooms(self, total_number_of_rooms):
+        self.__total_number_of_rooms = total_number_of_rooms
+
+    def get_swimming_pool(self):
+        return self.__swimming_pool
+
+    def set_swimming_pool(self, swimming_pool):
+        self.__swimming_pool = swimming_pool
+
+    # Display information
+    def display_hotel_info(self):
+        print("Hotel Information:")
+        print("Hotel Name: " + self.__hotel_name)
+        print("Location: " + self.__hotel_location)
+        print("Rating: " + str(self.__hotel_rating))
+        print("Capacity: " + str(self.__hotel_capacity))
+        print("Total Number of Rooms: " + str(self.__total_number_of_rooms))
+        print("Swimming Pool: " + str(self.__swimming_pool))
+
+    def check_availability(self):
+        print("Checking availability at " + self.__hotel_name + "...")
+
+
+
+#Objects for User class
+user1 = User("Hazza", "Aldarmaki", "784-1234-56789-0", "hazza1234@gmail.com", 971501234567, "Khalifa city, Abu Dhabi")
+user1.display_user_info()
+user1.display_full_name()
+
+print("\n")
+
+user2 = User("Mohammed", "Aldarmaki", "784-2222-56789-0", "mohammed1234@gmail.com", 971502234567, "MBZ city, Abu Dhabi")
+user2.display_user_info()
+user2.display_full_name()
+
+print("\n")
+
+user3 = User("Arthur", "Morgan", "784-0000-56789-0", "arthur1234@gmail.com", 971503234567, "Blackwater, America")
+user3.display_user_info()
+user3.display_full_name()
+
+print("\n")
+
+#Objects for Room class
+room1 = Room(115, "Deluxe", "Large", "2 Adults", 2, 500.50)
+room1.display_room_info()
+room1.confirm_room()
+
+print("\n")
+
+room2 = Room(116, "Standard", "Medium", "1 Adult", 1, 300.50)
+room2.display_room_info()
+room2.confirm_room()
+
+print("\n")
+
+room3 = Room(117, "Deluxe", "Large", "2 Adult", 2, 600.50)
+room3.display_room_info()
+room3.confirm_room()
+
+print("\n")
+
+#Objects for Reservation class
+reservation1 = Reservation("R12345", user1.get_first_name() + " " + user1.get_last_name(), room1.get_room_number(),
+                           date(2024, 2, 4), date(2024, 2, 8), "Confirmed")
+reservation1.display_reservation_info()
+reservation1.confirm_reservation()
+
+print("\n")
+
+reservation2 = Reservation("R22345", user2.get_first_name() + " " + user2.get_last_name(), room2.get_room_number(),
+                           date(2024, 2, 5), date(2024, 2, 10), "Confirmed")
+reservation2.display_reservation_info()
+reservation2.confirm_reservation()
+
+print("\n")
+
+reservation3 = Reservation("R32345", user3.get_first_name() + " " + user3.get_last_name(), room3.get_room_number(),
+                           date(2024, 2, 6), date(2024, 2, 9), "Confirmed")
+reservation3.display_reservation_info()
+reservation3.confirm_reservation()
+
+
+print("\n")
+
+#Objects for Payment class
+payment1 = Payment("P1234", "Credit Card", "AED", 2002.00, 1000.00, "Completed")
+payment1.display_payment_info()
+payment1.process_payment()
+
+print("\n")
+
+payment2 = Payment("P2234", "Credit Card", "AED", 1002.00, 500.00, "Completed")
+payment2.display_payment_info()
+payment2.process_payment()
+
+print("\n")
+
+payment3 = Payment("P3234", "Credit Card", "AED", 1806.00, 900.00, "Completed")
+payment3.display_payment_info()
+payment3.process_payment()
+
+print("\n")
+
+#Create Hotel object
+hotel1 = Hotel("Ritz Carlton", "Abu Dhabi", 4.9, "1000 Guests", 500, True)
+hotel1.display_hotel_info()
+hotel1.check_availability()
+
+print("\n")
+
+hotel2 = Hotel("Hilton", "Dubai", 4.5, "500 Guests", 250, True)
+hotel2.display_hotel_info()
+hotel2.check_availability()
+
+print("\n")
+
+hotel3 = Hotel("Blackwater Hotel", "Blackwater", 5.0, "10 Guests", 10, False)
+hotel3.display_hotel_info()
+hotel3.check_availability()
